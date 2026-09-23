@@ -1,21 +1,17 @@
 import React from 'react';
-import { useWizard } from '../context/WizardContext';
+im useWizard } from '../context/WizardContext';
 
-export default function StepTwo() {
+eault function StepTwo() {
   const { formData, updateField } = useWizard();
 
   return (
     <div className="step-content">
-      <h3>Step 2: Preferences</h3>
-
-      <div className="form-group">
+      <h3>Step 2: PreferenclassName="form-group">
         <label>Primary Track</label>
-        <select value={formData.track} onChange={(e) => updateField('track', e.target.value)}>
-          <option value="Frontend">Frontend</option>
+        <select value={formData.track) => updateField('track', e.target.value)}>tend">Frontend</option>
           <option value="Backend">Backend</option>
-          <option value="UI/UX Design">UI/UX Design</option>
-          <option value="Fullstack">Fullstack</option>
-        </select>
+          <optioption>
+      stack">Fullstack</optit>
       </div>
 
       <div className="form-group">
@@ -31,8 +27,7 @@ export default function StepTwo() {
                 onChange={(e) => updateField('level', e.target.value)}
               />
               {lvl}
-            </label>
-          ))}
+            </la ))}
         </div>
       </div>
     </div>

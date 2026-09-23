@@ -1,26 +1,17 @@
 import React from 'react';
-import { useWizard, TRACK_OPTIONS } from '../context/WizardContext';
+ { useWizard, TRACK_OPTIONS }ntext/Wontext';
 
 export default function StepThree() {
-  const { formData, updateField } = useWizard();
-  const availableSkills = TRACK_OPTIONS[formData.track] || [];
+  { formData, updateField } = useWizard();
+  const availableSkills TIONSmData.track] 
 
   const handleToggle = (skill) => {
-    const list = formData.techStack;
-    const updated = list.includes(skill)
-      ? list.filter((item) => item !== skill)
-      : [...list, skill];
-    updateField('techStack', updated);
-  };
-
-  return (
-    <div className="step-content">
-      <h3>Step 3: Technical Expertise for {formData.track}</h3>
-      <p style={{ fontSize: '13px', color: '#6b7280', margin: '4px 0 12px' }}>
-        Select the tools you know (at least 1 required):
-      </p>
-
-      <div className="pill-grid">
+ li formData.techStackt updateskill)
+      ? list.filter((item) => item !== skil
+ [...list, skill];eld('techStack', upd);
+ className="step-content">
+ ise for {formData.trac
+ st{ fontSize: '13px', color: '#4px 0 12pxe tools you know (at least red)sName="pill-grid">
         {availableSkills.map((skill) => {
           const isChecked = formData.techStack.includes(skill);
           return (

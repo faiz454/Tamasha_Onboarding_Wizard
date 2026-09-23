@@ -1,21 +1,18 @@
 import React from 'react';
-import { useWizard } from '../context/WizardContext';
-
+t { useWizard } from '../context/WizardContext
 export default function StepFour() {
-  const { formData, jumpToStep } = useWizard();
+  const { formData, jumpToStep } = used();
 
   return (
     <div className="step-content">
-      <h3>Step 4: Review Your Details</h3>
-
+      <h3>Step 4: Review Your Deta
       <div className="review-box">
         <div className="review-title">
-          <span>Personal Info</span>
-          <button type="button" onClick={() => jumpToStep(1)} className="link-btn">Edit</button>
-        </div>
-        <p style={{ margin: '4px 0' }}><strong>Name:</strong> {formData.name}</p>
-        <p style={{ margin: '4px 0' }}><strong>Email:</strong> {formData.email}</p>
-        <p style={{ margin: '4px 0' }}><strong>Portfolio:</strong> {formData.portfolio || 'None'}</p>
+       span>onal Info</span>  <button type="button" onCl> jumpToStep(1)} c"link-b>Edit</button>
+   
+        <p style={{ margin: '4px 0' }}><strong>Name:</strong> {formData.name
+     p e={{ margin: '4px 0' }}><st>E:</sg> {formDaemail}</p>
+   tyle={{ margin: '4px 0' }}><strong>Portfolio:</strong> {formData.portfolio || 'None'}</p>
       </div>
 
       <div className="review-box">

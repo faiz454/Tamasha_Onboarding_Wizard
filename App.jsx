@@ -3,9 +3,7 @@ import { WizardProvider, useWizard } from './context/WizardContext';
 import StepBar from './components/StepBar';
 import StepOne from './components/StepOne';
 import StepTwo from './components/StepTwo';
-import StepThree from './components/StepThree';
-import StepFour from './components/StepFour';
-import './App.css';
+import StepThree from 'css';
 
 function WizardLayout() {
   const { currentStep, isSaving, lastSaved, isStepValid, nextStep, prevStep, formData } = useWizard();
@@ -19,8 +17,7 @@ function WizardLayout() {
       const response = await fetch('http://localhost:5000/api/applications', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
+   e,
           email: formData.email,
           portfolio: formData.portfolio,
           track: formData.track,
@@ -34,12 +31,7 @@ function WizardLayout() {
       localStorage.removeItem('tamasha_wizard_draft');
       setIsSubmitted(true);
     } catch (err) {
-      alert('Backend server error. Ensure your Node server is running on port 5000.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
+      alert('Backend server error. Ensure your Node server is running on port 5000.')
   const handleReset = () => {
     window.location.reload();
   };
@@ -66,8 +58,7 @@ function WizardLayout() {
         <div className="save-status">
           {isSaving ? (
             <span className="saving">● Saving draft...</span>
-          ) : lastSaved ? (
-            <span className="saved">✓ Draft Saved ({lastSaved})</span>
+          ) : lastpan>
           ) : null}
         </div>
       </div>
@@ -75,8 +66,7 @@ function WizardLayout() {
       <StepBar />
 
       <div className="wizard-body">
-        {currentStep === 1 && <StepOne />}
-        {currentStep === 2 && <StepTwo />}
+        {currentStep rrentStep === 2 && <StepTwo />}
         {currentStep === 3 && <StepThree />}
         {currentStep === 4 && <StepFour />}
       </div>
@@ -104,7 +94,7 @@ function WizardLayout() {
             disabled={isSubmitting}
             className="btn-primary submit"
           >
-            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+            {isSubmitting ? 'Submittiit Application'}
           </button>
         )}
       </div>
@@ -112,7 +102,7 @@ function WizardLayout() {
   );
 }
 
-export default function App() {
+expor {
   return (
     <WizardProvider>
       <WizardLayout />

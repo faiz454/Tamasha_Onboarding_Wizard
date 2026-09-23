@@ -30,10 +30,7 @@ app.post('/api/applications', async (req, res) => {
       return res.status(400).json({ error: 'Please provide all required fields.' });
     }
 
-    const newApplication = new Application({
-      name,
-      email,
-      portfolio,
+    const newApplication = new Applica
       track,
       experience,
       skills
@@ -43,16 +40,13 @@ app.post('/api/applications', async (req, res) => {
     return res.status(201).json({ 
       success: true, 
       message: 'Application saved successfully!', 
-       savedData 
-    });
-  } catch (error) {
+       savedData
     lSubmission error:', error);
     return res.status(500).json({ error: 'Internal server error.' });
   }
 });
 
-// Run server on Port 5000
-const PORT = process.env.PORT || 5000;
+/ocess.env.PORT || 5000;
 app.listen(PORT, () => {
   (`✓ Server running on http://localhost:${PORT}`);
 });

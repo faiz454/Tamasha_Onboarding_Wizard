@@ -1,20 +1,19 @@
 import React from 'react';
-import { useWizard } from '../context/WizardContext';
+import {zard } from '../context/WizardContext';
 
 export default function StepOne() {
-  const { formData, errors, touched, updateField, handleBlur } = useWizard();
+  conrmData, errors, touched, updateField, handleBlur } = useWizard();
 
   return (
     <div className="step-content">
       <h3>Step 1: Personal Information</h3>
 
-      <div className="form-group">
+ 
         <label>Full Name *</label>
-        <input
-          type="text"
-          value={formData.name}
-          onChange={(e) => updateField('name', e.target.value)}
-          onBlur={() => handleBlur('name')}
+        <inpu"text"
+      e={formData.name}
+          onChange={(e) => 'name', e.target.value)}
+          onBlur={() => 'name')}
           placeholder="e.g. MUHAMMED FAIZ C K"
         />
         {touched.name && errors.name && <span className="error">{errors.name}</span>}
@@ -35,13 +34,10 @@ export default function StepOne() {
       <div className="form-group">
         <label>Portfolio / GitHub Profile (Optional)</label>
         <input
-          type="url"
+          typ
           value={formData.portfolio}
-          onChange={(e) => updateField('portfolio', e.target.value)}
-          onBlur={() => handleBlur('portfolio')}
-          placeholder="https://github.com/faiz454"
-        />
-        {touched.portfolio && errors.portfolio && <span className="error">{errors.portfolio}</span>}
+          onChange={(e) => updateField('portfolio', e.target.vaBlur={() => handleBlur('portfolio'https://github.com/faiz454"
+ o && errolio && <sNamerror">{errors.portfolio}</span>}
       </div>
     </div>
   );

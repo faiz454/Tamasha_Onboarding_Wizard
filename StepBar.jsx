@@ -1,27 +1,24 @@
-import React from 'react';
+imort React from 'react';
 import { useWizard } from '../context/WizardContext';
 
-const steps = ['Personal Info', 'Preferences', 'Technical Expertise', 'Review'];
-
-export default function StepBar() {
-  const { currentStep } = useWizard();
+ steps = ['Personal Info', 'Prefences', 'Technical Expertise', eview'];
+ default function StepBar() {
+  co currentStep } = useWizard();
 
   return (
-    <div className="stepper-bar">
+    lassName="stepper-bar">
       {steps.map((label, index) => {
-        const stepNum = index + 1;
+  const stepNum = index + 1;
         const isActive = currentStep === stepNum;
-        const isCompleted = currentStep > stepNum;
-
-        return (
-          <div key={label} className="step-item">
-            <div className={`step-circle ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}`}>
+        const isCompleted = c  return (
+          <div key={label} cle="tem">
+            <div className={`step-circle tive ? 'active' : ''} ${isCompleted ? ted' : ''}`}>
               {isCompleted ? '✓' : stepNum}
             </div>
             <span className={`step-label ${isActive ? 'bold' : ''}`}>{label}</span>
           </div>
         );
-      })}
+ )}
     </div>
   );
 }

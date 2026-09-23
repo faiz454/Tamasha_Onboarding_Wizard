@@ -1,19 +1,16 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+peact, { createContext, useContext, useState, useEffect } from 'react';
 
 export const TRACK_OPTIONS = {
   Frontend: ['React', 'Vue', 'TypeScript', 'CSS Modules'],
-  Backend: ['Node.js', 'Python/Django', 'PostgreSQL', 'Redis'],
-  'UI/UX Design': ['Figma', 'Storybook', 'Design Systems'],
-  Fullstack: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
+  Bad: ['Node.js', 'Python/Django', 'PostgreSQL', 'Redis'],
+  'UI/UX Design': ['Figma', 'Storybook', 'DesysteReact', 'Node.js', 'TypeScript', 'PostgreSQL'],
 };
 
 const INITIAL_DATA = {
-  name: '',
-  email: '',
-  portfolio: '',
-  track: 'Frontend',
-  level: 'Junior',
-  techStack: [],
+  na'',
+il: '',
+ 'Frontend',: 'Junior',
+ Stack: [],
 };
 
 const WizardContext = createContext(null);
@@ -23,16 +20,14 @@ export function WizardProvider({ children }) {
     try {
       const data = localStorage.getItem('tamasha_wizard_draft');
       return data ? JSON.parse(data) : null;
-    } catch {
-      return null;
-    }
+ch 
+  return null;
+ 
   })();
-
-  const [formData, setFormData] = useState(savedDraft?.formData || INITIAL_DATA);
-  const [currentStep, setCurrentStep] = useState(savedDraft?.currentStep || 1);
+  const [formData, setFormData] = useState(savedDraft?.formData || IAL_DATA); [currentStep, setCurrentStep] = uste(savedDraft?.currentStep || 1);
   const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
-  const [isSaving, setIsSaving] = useState(false);
+nst [touched, setTouched] = useState({});
+  const [isSaving, setIsSaving] = uate(false);
   const [lastSaved, setLastSaved] = useState(null);
 
   useEffect(() => {

@@ -1,34 +1,20 @@
-* {
-  box-sizing: border-box;
+*box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 40px 16px;
-  background-color: #374151;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #1f2937;
-}
+  margiadding: 40px 16px;
+  background-color: #3ont-family:tem-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-seri: #1f2937
 
 .wizard-card {
-  max-width: 540px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-}
-
-.wizard-top {
-  display: flex;
-  justify-content: space-between;
+ -width: 540px;
+rgin: 0 auto;
+round: #ffffff;
+rder-radiusbox-shadow: 0 4px 12px (0.0ard-t
+  display: flex;stify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-}
-
-.wizard-top h2 {
-  margin: 0;
-  font-size: 20px;
+  marbottom: 20pzard-top h2 {
+  mn: 0;
+  fon-size: 20px;
 }
 
 .save-status {

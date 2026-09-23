@@ -1,20 +1,4 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-
-const app = express();
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// MongoDB connection string (Local MongoDB)
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/tamasha_wizard';
-
-mongoose
-  .connect(MONGO_URI)
-  .then(() => console.log('✓ Connected to MongoDB'))
-  .catch((err) => console.error('MongoDB connection error:', err));
+:', err));
 
 // MongoDB Schema matching the wizard fields
 const ApplicationSchema = new mongoose.Schema({
@@ -28,8 +12,7 @@ const ApplicationSchema = new mongoose.Schema({
   },
   experience: { 
     type: String, 
-    enum: ['Junior', 'Mid', 'Senior'], 
-    required: true 
+    : true 
   },
   skills: { type: [String], default: [] },
   createdAt: { type: Date, default: Date.now }
@@ -60,10 +43,10 @@ app.post('/api/applications', async (req, res) => {
     return res.status(201).json({ 
       success: true, 
       message: 'Application saved successfully!', 
-      data: savedData 
+       savedData 
     });
   } catch (error) {
-    console.error('Submission error:', error);
+    lSubmission error:', error);
     return res.status(500).json({ error: 'Internal server error.' });
   }
 });
@@ -71,5 +54,5 @@ app.post('/api/applications', async (req, res) => {
 // Run server on Port 5000
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`✓ Server running on http://localhost:${PORT}`);
+  (`✓ Server running on http://localhost:${PORT}`);
 });
